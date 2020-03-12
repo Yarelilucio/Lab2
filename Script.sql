@@ -36,3 +36,10 @@ AS
 BEGIN
 UPDATE Video set titulo=@titulo,repro=@repro,url=@url where idVideo=@idVideo
 END;
+
+create procedure sp_video_buscar
+@idVideo int
+AS
+Begin 
+SELECT * FROM Video where idVideo=@idVideo
+END;

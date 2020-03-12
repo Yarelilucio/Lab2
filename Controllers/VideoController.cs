@@ -68,6 +68,19 @@ namespace MVCLaboratorio.Controllers
             BaseHelper.ejecutarConsulta("sp_video_actualizar", CommandType.StoredProcedure, parametros);
             return RedirectToAction("Index", "Video");
         }
+        public ActionResult Buscar()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Buscar(int idVideo)
+        {
+            return View();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
 
+            BaseHelper.ejecutarConsulta("sp_video_buscar", CommandType.StoredProcedure, parametros);
+            return RedirectToAction("Index", "Video");
+        }
     }
 }

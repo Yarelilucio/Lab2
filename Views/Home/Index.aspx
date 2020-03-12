@@ -21,8 +21,9 @@
     <hr />  
     <a href="/Video/Edit">Modificar video</a>
     <hr />  
-    <a href="/Video/Search">Buscar video</a>
-
+    <a href="/Video/Buscar">Buscar video</a>
+    <hr />
+    <a href="/Video/Resultado">Video</a>
 
 
 </body>
